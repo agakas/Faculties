@@ -7,8 +7,7 @@ class FacultySerializer(serializers.HyperlinkedModelSerializer):
         fields = ('id', 'faculty_name')
 
 class DepartmentSerializer(serializers.HyperlinkedModelSerializer):
-    faculty = FacultySerializer
+    faculty = serializers.CharField(source='faculty.id')
     class Meta:
         model = Department
         fields = ('id', 'department_name', 'year', 'auditorium', 'boss', 'phone', 'email', 'employee_count', 'bachelors_count', 'master_count', 'faculty')
-    depth = 1
