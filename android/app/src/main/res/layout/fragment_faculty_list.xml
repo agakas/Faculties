@@ -26,7 +26,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:text="Факультеты"
+                    android:text="Турфирмы"
                     android:textColor="#FFFFFF"
                     android:textSize="24sp" />
 
@@ -43,10 +43,9 @@
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/appbar"
-            app:layout_constraintVertical_bias="0.0"
             tools:listitem="@layout/element_faculty" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -57,6 +56,7 @@
             android:layout_marginBottom="16dp"
             android:backgroundTint="#429515"
             android:contentDescription="buttonAdd"
+
             android:tintMode="add"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
