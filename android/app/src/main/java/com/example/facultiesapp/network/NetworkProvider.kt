@@ -27,7 +27,7 @@ class NetworkProvider(context: Context) {
         .readTimeout(45, TimeUnit.SECONDS)
         .writeTimeout(45, TimeUnit.SECONDS)
 
-    val individualApi: MyApi = retrofitBuilder
+    val myApi: MyApi = retrofitBuilder
         .client(okHttpClientBuilder.build())
         .build()
         .create(MyApi::class.java)
