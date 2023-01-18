@@ -13,7 +13,7 @@ import com.example.facultiesapp.models.Faculty
         Faculty::class,
         Department::class,
     ],
-    version = 4
+    version = 3
 )
 @TypeConverters(Converters::class)
 abstract class AllDatabase: RoomDatabase(){
