@@ -41,7 +41,7 @@
 
         <androidx.recyclerview.widget.RecyclerView
 
-            android:id="@+id/rvTours"
+            android:id="@+id/rvDepartments"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:clipToPadding="false"
@@ -59,9 +59,9 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
             android:layout_marginBottom="16dp"
-            android:backgroundTint="#429515"
+            android:backgroundTint="#FF2A600D"
+            android:src="@mipmap/ic_launcher_plus24"
             android:contentDescription="Add"
-
             android:tintMode="add"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />

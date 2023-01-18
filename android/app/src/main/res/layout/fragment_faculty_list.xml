@@ -26,7 +26,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:text="Турфирмы"
+                    android:text="Факультеты"
                     android:textColor="#FFFFFF"
                     android:textSize="24sp" />
 
@@ -34,7 +34,7 @@
         </com.google.android.material.appbar.AppBarLayout>
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rvTourfirms"
+            android:id="@+id/rvFaculties"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:clipToPadding="false"
@@ -54,9 +54,9 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
             android:layout_marginBottom="16dp"
-            android:backgroundTint="#429515"
+            android:backgroundTint="#2A600D"
             android:contentDescription="buttonAdd"
-
+            android:src="@mipmap/ic_launcher_plus24"
             android:tintMode="add"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />

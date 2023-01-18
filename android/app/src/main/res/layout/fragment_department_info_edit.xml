@@ -52,11 +52,11 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
                     android:text="Название кафедры"
-                    app:layout_constraintBottom_toTopOf="@+id/etNameTour"
-                    app:layout_constraintStart_toStartOf="@+id/etNameTour" />
+                    app:layout_constraintBottom_toTopOf="@+id/etNameDepartment"
+                    app:layout_constraintStart_toStartOf="@+id/etNameDepartment" />
 
                 <EditText
-                    android:id="@+id/etNameTour"
+                    android:id="@+id/etNameDepartment"
                     android:layout_width="match_parent"
                     android:layout_height="70dp"
                     android:layout_marginHorizontal="16dp"
@@ -73,150 +73,172 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
 
-                    android:text="Страна"
-                    app:layout_constraintBottom_toTopOf="@+id/etCountry"
-                    app:layout_constraintStart_toStartOf="@+id/etCountry" />
+                    android:text="Год основания"
+                    app:layout_constraintBottom_toTopOf="@+id/etYear"
+                    app:layout_constraintStart_toStartOf="@+id/etYear" />
 
                 <EditText
-                    android:id="@+id/etCountry"
+                    android:id="@+id/etYear"
                     android:layout_width="match_parent"
                     android:layout_height="70dp"
                     android:layout_marginHorizontal="16dp"
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="32dp"
                     android:layout_marginEnd="8dp"
-                    android:hint="Введите страну"
+                    android:hint="Введите год"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/etNameTour" />
+                    app:layout_constraintTop_toBottomOf="@+id/etNameDepartment" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
 
-                    android:text="Количество билетов"
-                    app:layout_constraintBottom_toTopOf="@+id/etKolvo"
-                    app:layout_constraintStart_toStartOf="@+id/etKolvo" />
+                    android:text="Аудитория"
+                    app:layout_constraintBottom_toTopOf="@+id/etAuditorium"
+                    app:layout_constraintStart_toStartOf="@+id/etAuditorium" />
 
                 <EditText
-                    android:id="@+id/etKolvo"
+                    android:id="@+id/etAuditorium"
                     android:layout_width="match_parent"
                     android:layout_height="70dp"
                     android:layout_marginHorizontal="16dp"
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="32dp"
                     android:layout_marginEnd="8dp"
-                    android:hint="Введите количество билетов"
+                    android:hint="Введите номер аудитории"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/etCountry" />
+                    app:layout_constraintTop_toBottomOf="@+id/etYear" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
-                    android:text="Название отеля"
-                    app:layout_constraintBottom_toTopOf="@+id/etHotelName"
-                    app:layout_constraintStart_toStartOf="@+id/etHotelName" />
+                    android:text="Заведующий кафедрой"
+                    app:layout_constraintBottom_toTopOf="@+id/etBoss"
+                    app:layout_constraintStart_toStartOf="@+id/etBoss" />
 
                 <EditText
-                    android:id="@+id/etHotelName"
+                    android:id="@+id/etBoss"
                     android:layout_width="match_parent"
                     android:layout_height="70dp"
                     android:layout_marginHorizontal="16dp"
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="32dp"
                     android:layout_marginEnd="8dp"
-                    android:hint="Введите название отеля"
+                    android:hint="Ф.И.О."
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/etKolvo" />
+                    app:layout_constraintTop_toBottomOf="@+id/etAuditorium" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
-                    android:text="Дата продажи тура"
-                    app:layout_constraintBottom_toTopOf="@+id/dpSaleDate"
-                    app:layout_constraintStart_toStartOf="@+id/dpSaleDate" />
+                    android:text="Email"
+                    app:layout_constraintBottom_toTopOf="@+id/etEmail"
+                    app:layout_constraintStart_toStartOf="@+id/etEmail" />
 
                 <EditText
-                    android:id="@+id/dpSaleDate"
+                    android:id="@+id/etEmail"
                     android:layout_width="match_parent"
                     android:layout_height="70dp"
                     android:layout_marginHorizontal="16dp"
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="32dp"
                     android:layout_marginEnd="8dp"
-                    android:hint="Введите дату продажи"
+                    android:hint="Введите email"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/etKolvoDays" />
+                    app:layout_constraintTop_toBottomOf="@+id/etPhone" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
-                    android:text="Количество дней"
-                    app:layout_constraintBottom_toTopOf="@+id/etKolvoDays"
-                    app:layout_constraintStart_toStartOf="@+id/etKolvoDays" />
+                    android:text="Телефон"
+                    app:layout_constraintBottom_toTopOf="@+id/etPhone"
+                    app:layout_constraintStart_toStartOf="@+id/etPhone" />
 
                 <EditText
-                    android:id="@+id/etKolvoDays"
+                    android:id="@+id/etPhone"
                     android:layout_width="match_parent"
                     android:layout_height="70dp"
                     android:layout_marginHorizontal="16dp"
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="32dp"
                     android:layout_marginEnd="8dp"
-                    android:hint="Введите количество дней тура"
+                    android:hint="Введите номер телефона"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="1.0"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/etHotelName" />
+                    app:layout_constraintTop_toBottomOf="@+id/etBoss" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
-                    android:text="Сумма тура"
-                    app:layout_constraintBottom_toTopOf="@+id/etSumma"
-                    app:layout_constraintStart_toStartOf="@+id/etSumma" />
+                    android:text="Количество сотрудников"
+                    app:layout_constraintBottom_toTopOf="@+id/etEmploy"
+                    app:layout_constraintStart_toStartOf="@+id/etEmploy" />
 
                 <EditText
-                    android:id="@+id/etSumma"
+                    android:id="@+id/etEmploy"
                     android:layout_width="match_parent"
                     android:layout_height="70dp"
                     android:layout_marginHorizontal="16dp"
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="32dp"
                     android:layout_marginEnd="8dp"
-                    android:hint="Введите сумму тура"
+                    android:hint="Введите количество сотрудников"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/dpSaleDate" />
+                    app:layout_constraintTop_toBottomOf="@+id/etEmail" />
 
                 <TextView
+                    android:id="@+id/textView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
-                    android:text="Оценка тура"
-                    app:layout_constraintBottom_toTopOf="@+id/etRate"
-                    app:layout_constraintStart_toStartOf="@+id/etRate" />
+                    android:text="Количество бакалвров"
+                    app:layout_constraintBottom_toTopOf="@+id/etBachalors"
+                    app:layout_constraintStart_toStartOf="@+id/etBachalors" />
 
                 <EditText
-                    android:id="@+id/etRate"
+                    android:id="@+id/etBachalors"
                     android:layout_width="match_parent"
                     android:layout_height="70dp"
                     android:layout_marginHorizontal="16dp"
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="32dp"
                     android:layout_marginEnd="8dp"
-                    android:hint="Введите оценку"
+                    android:hint="Введите количество бакалавров"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/etSumma" />
+                    app:layout_constraintTop_toBottomOf="@+id/etEmploy" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="Количество магистров"
+                    app:layout_constraintBottom_toTopOf="@+id/etMasters"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <EditText
+                    android:id="@+id/etMasters"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginEnd="8dp"
+                    android:hint="Введите количество магистров"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/etBachalors" />
 
                 <Button
                     android:id="@+id/btnSave"
@@ -229,7 +251,7 @@
                     android:text="Сохранить"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/etRate" />
+                    app:layout_constraintTop_toBottomOf="@id/etMasters" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
         </ScrollView>
