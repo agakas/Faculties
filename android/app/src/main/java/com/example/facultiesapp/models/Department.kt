@@ -18,14 +18,14 @@ import androidx.room.PrimaryKey
 data class Department(
     @PrimaryKey var id: Int = 0,
     var department_name: String = "",
-    var year: Int = 1900,
+    var year: String = "1900",
     var auditorium: String = "",
     var boss: String = "",
     var phone: String = "",
     var email: String = "",
-    var employee_count: Int = 0,
-    var bachelors_count: Int = 0,
-    var master_count: Int = 0,
+    var employee_count: String = "0",
+    var bachelors_count: String = "0",
+    var master_count: String = "0",
     var faculty: Int = 0,
 ) {
     companion object {
