@@ -40,12 +40,12 @@ android {
 
 dependencies {
 
-    implementation 'androidx.core:core-ktx:1.7.0'
-    implementation 'androidx.appcompat:appcompat:1.5.1'
+    implementation 'androidx.core:core-ktx:1.9.0'
+    implementation 'androidx.appcompat:appcompat:1.6.0'
     implementation 'com.google.android.material:material:1.7.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
-    implementation 'androidx.room:room-ktx:2.5.0-beta02'
-    kapt 'androidx.room:room-compiler:2.5.0-rc01'
+    implementation 'androidx.room:room-ktx:2.5.0'
+    kapt 'androidx.room:room-compiler:2.5.0'
     implementation 'androidx.databinding:databinding-runtime:7.4.0'
     testImplementation 'junit:junit:4.13.2'
     implementation 'com.google.code.gson:gson:2.10'

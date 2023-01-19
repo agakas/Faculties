@@ -11,6 +11,7 @@ import com.example.facultiesapp.R
 import com.example.facultiesapp.databinding.FragmentDepartmentInfoEditBinding
 import com.example.facultiesapp.getInitParams
 import com.example.facultiesapp.models.Department
+import com.example.facultiesapp.provideInitParams
 import java.text.SimpleDateFormat
 import java.time.LocalDate
 import java.util.*
@@ -70,63 +71,95 @@ class DepartmentInfoFragment: MainFragment() {
             )
 
             validationOK = true
-            var pravdat = false
 
-            try {
-                val date = LocalDate.parse(dpSaleDate.text.toString())
-                pravdat = true
-            }
-            catch (e: Exception){
-
-            }
-
-            if(etNameTour == null || etNameTour.text.toString() == "" || check(etNameTour.text.toString()) == false){
-                etNameTour.error = "Неправильный ввод названия тура"
+            val regex1 = "^(?!\\s)[-а-яА-Я ]*(?<!\\s)\$".toRegex()
+            if(!regex1.matches(etNameDepartment.text.toString())){
+                etNameDepartment.error = "Введите название кафедры"
                 validationOK = false
             }
 
-            if(etCountry == null ||  etCountry.text.toString() == "" || check(etCountry.text.toString()) == false) {
-                etCountry.error = "Неправильный ввод страны"
+            val regex2 = "^[0-9]+\$".toRegex()
+            if(!regex2.matches(etYear.text.toString())||etYear.text.toString().toInt() > 2023 || etYear.text.toString().toInt() < 1){
+                etYear.error = "Введите правильный год"
                 validationOK = false
             }
 
-            if(etKolvo == null || etKolvo.text.toString() == "" || check2(etKolvo.text.toString()) == false) {
-                etKolvo.error = "Неправильный ввод количества билетов"
+            val regex3 = "^[0-9]+\$".toRegex()
+            if(!regex3.matches(etAuditorium.text.toString())){
+                etAuditorium.error = "Введите номер аудитории (только цифры)"
                 validationOK = false
             }
 
-
-
-
-            if(etHotelName == null || etHotelName.text.toString() == "" || check(etHotelName.text.toString()) == false) {
-                etHotelName.error = "Ошибка ввода названия отеля"
+            val regex4 = "^(?!\\s)[-а-яА-Я ]*(?<!\\s)\$".toRegex()
+            if(!regex4.matches(etBoss.text.toString())){
+                etBoss.error = "Введите ФИО заведующего"
                 validationOK = false
             }
 
-            if(etKolvoDays == null || etKolvoDays.text.toString() == "" || check2(etKolvoDays.text.toString()) == false) {
-                etKolvoDays.error = "Ошибка ввода количества дней"
+            val regex5 = "^([8]{1}[0-9]{10})?\$".toRegex()
+            if(!regex5.matches(etPhone.text.toString())){
+                etPhone.error = "Телефон должен начинаться с 8 и состоять из 11 цифр"
                 validationOK = false
             }
 
-            if(etSumma == null || etSumma.text.toString() == "" || check2(etSumma.text.toString()) == false) {
-                etSumma.error = "Ошибка ввода общей суммы"
-                validationOK = false
-            }
-            if(etRate == null || etRate.text.toString() == "" || check2(etRate.text.toString()) == false) {
-                etRate.error = "Ошибка ввода оценки тура"
+            val regex6 = "^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9-.]+\$".toRegex()
+            if(!regex6.matches(etEmail.text.toString())){
+                etEmail.error = "Неправильный формат email"
                 validationOK = false
             }
 
-            if(dpSaleDate == null || dpSaleDate.text.toString() == "" || pravdat == false) {
-                dpSaleDate.error = "Неправильный формат даты"
+            val regex7 =  "^[0-9]+\$".toRegex()
+            if(!regex7.matches(etEmploy.text.toString())||etEmploy.text.toString().toInt() < 0 || etEmploy.text.toString().length > 4){
+                etEmploy.error = "Введите кол-во сотрудников до 1000"
+                validationOK = false
+            }
+            if(!regex7.matches(etBachalors.text.toString())||etBachalors.text.toString().toInt() < 0 || etBachalors.text.toString().length > 4){
+                etBachalors.error = "Введите кол-во бакалавров до 1000"
+                validationOK = false
+            }
+            if(!regex7.matches(etMasters.text.toString())||etMasters.text.toString().toInt() < 0 || etMasters.text.toString().length > 4){
+                etMasters.error = "Введите кол-во магистров до 1000"
                 validationOK = false
             }
 
             if(validationOK) {
-                viewModel.saveTour(tour)
+                viewModel.saveDepartment(department)
                 closeFragment()
             }
-
         }
+    }
+    private fun check(text:String):Boolean {
+
+        val alphabet = arrayListOf<String>(
+            "A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z",
+            "a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z",
+            "0","1","2","3","4","5","6","7","8","9","!","?","_", "."
+        )
+        var index = 0
+        for (alphabet in alphabet) {
+            if (text.contains(alphabet[index])) {
+                return false
+            }
+        }
+        return true
+    }
+    private fun updateUI(department: Department?) {
+        department?.let {
+            with(binding) {
+                etNameDepartment.setText(department.department_name)
+                etYear.setText(department.year)
+                etAuditorium.setText(department.auditorium)
+                etBoss.setText(department.boss)
+                etPhone.setText(department.phone)
+                etEmail.setText(department.email)
+                etEmploy.setText(department.employee_count)
+                etBachalors.setText(department.bachelors_count)
+                etMasters.setText(department.master_count)
+            }
+        }
+    }
+    companion object {
+        fun newInstance(initParams: Department_Info_Fragment_Init) =
+            DepartmentInfoFragment().provideInitParams(initParams) as DepartmentInfoFragment
     }
 }

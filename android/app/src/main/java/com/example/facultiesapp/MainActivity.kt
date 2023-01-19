@@ -13,7 +13,8 @@ import com.example.facultiesapp.faculty.FacultyInfoFragment
 import com.example.facultiesapp.faculty.FacultyListFragment
 import com.example.facultiesapp.faculty.Faculty_Info_Fragment_Init
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), Navigator {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -49,5 +50,25 @@ class MainActivity : AppCompatActivity() {
             finish()
         }
     }
+    override fun navigateToFaculty(faculty: Faculty) {
+        addFragment(
+            DepartmentListFragment.newInstance(
+                Department_List_Fragment_Init(faculty.id, faculty.faculty_name)
+            )
+        )
+    }
 
+    override fun navigateToDepartmentCreateANDEdit(facultyId: Int, departmentId: Int?) {
+        addFragment(
+            DepartmentInfoFragment.newInstance(Department_Info_Fragment_Init(facultyId,departmentId))
+        )
+    }
+
+    override fun navigateToFacultyCreateANDEdit(id: Int?) {
+        addFragment(FacultyInfoFragment.newInstance(Faculty_Info_Fragment_Init(id)))
+    }
+
+    override fun exit(fragment: Fragment) {
+        removeFragment(fragment)
+    }
 }

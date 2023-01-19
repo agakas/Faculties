@@ -7,12 +7,12 @@ import java.time.LocalDate
 import java.util.*
 
 @Dao
-interface DepartmentDao {
+public abstract interface DepartmentDao {
 
-    @Query("SELECT * FROM $TABLE_NAME WHERE faculty = (:faculty)")
+    @Query("SELECT * FROM Department WHERE faculty = (:faculty)")
     fun getDepartments(faculty: Int): Flow<List<Department>>
 
-    @Query("SELECT * FROM $TABLE_NAME WHERE id = (:id)")
+    @Query("SELECT * FROM Department WHERE id = (:id)")
     suspend fun getDepartmentById(id: Int): Department
 
     @Update
@@ -24,7 +24,7 @@ interface DepartmentDao {
     @Delete
     suspend fun delete(tour: Department)
 
-    @Query("DELETE FROM $TABLE_NAME WHERE  id = (:Id)")
+    @Query("DELETE FROM Department WHERE  id = (:id)")
     suspend fun deleteById(id: Int)
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)

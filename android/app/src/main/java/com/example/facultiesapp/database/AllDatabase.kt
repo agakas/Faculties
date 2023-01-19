@@ -13,9 +13,9 @@ import com.example.facultiesapp.models.Faculty
         Faculty::class,
         Department::class,
     ],
-    version = 3
+    version = 4
 )
-@TypeConverters(Converters::class)
+//@TypeConverters(Converters::class)
 abstract class AllDatabase: RoomDatabase(){
     abstract fun facultyDao(): FacultyDao
     abstract fun departmentDao(): DepartmentDao

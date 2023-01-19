@@ -34,7 +34,7 @@ class NetworkProvider(context: Context) {
 
     companion object {
         //Не забудь указать IPv4 адресс компьютера в сети
-        private val BASE_URL = " http://127.0.0.1:8000/"
+        private val BASE_URL = " http://192.168.167.107:8001/"
         private var INSTANCE: NetworkProvider? = null
         fun init(context: Context) {
             if (INSTANCE == null) {

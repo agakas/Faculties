@@ -6,7 +6,8 @@ import com.example.facultiesapp.models.Faculty
 import java.time.LocalDate
 import java.util.*
 
-interface FacultyDao {
+@Dao
+public abstract interface FacultyDao {
 
     @Query("SELECT * FROM $TABLE_NAME")
     fun getFaculties(): Flow<List<Faculty>>
@@ -17,7 +18,7 @@ interface FacultyDao {
     @Update
     suspend fun updateFaculty(faculty: Faculty)
 
-    @Query("DELETE FROM $TABLE_NAME WHERE  id = (:Id)")
+    @Query("DELETE FROM $TABLE_NAME WHERE  id = (:id)")
     suspend fun deleteById(id: Int)
 
     @Delete

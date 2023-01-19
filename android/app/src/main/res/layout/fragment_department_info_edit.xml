@@ -52,6 +52,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
                     android:text="Название кафедры"
+                    android:textColor="#000000"
                     app:layout_constraintBottom_toTopOf="@+id/etNameDepartment"
                     app:layout_constraintStart_toStartOf="@+id/etNameDepartment" />
 
@@ -64,6 +65,8 @@
                     android:layout_marginTop="40dp"
                     android:layout_marginEnd="8dp"
                     android:hint="Введите название"
+                    android:textColor="#000000"
+                    android:textColorHint="#100E0E"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -74,6 +77,7 @@
                     android:layout_marginStart="8dp"
 
                     android:text="Год основания"
+                    android:textColor="#000000"
                     app:layout_constraintBottom_toTopOf="@+id/etYear"
                     app:layout_constraintStart_toStartOf="@+id/etYear" />
 
@@ -86,6 +90,8 @@
                     android:layout_marginTop="32dp"
                     android:layout_marginEnd="8dp"
                     android:hint="Введите год"
+                    android:textColor="#000000"
+                    android:textColorHint="#000000"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/etNameDepartment" />
@@ -96,6 +102,7 @@
                     android:layout_marginStart="8dp"
 
                     android:text="Аудитория"
+                    android:textColor="#000000"
                     app:layout_constraintBottom_toTopOf="@+id/etAuditorium"
                     app:layout_constraintStart_toStartOf="@+id/etAuditorium" />
 
@@ -108,6 +115,8 @@
                     android:layout_marginTop="32dp"
                     android:layout_marginEnd="8dp"
                     android:hint="Введите номер аудитории"
+                    android:textColor="#000000"
+                    android:textColorHint="#000000"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/etYear" />
@@ -117,6 +126,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
                     android:text="Заведующий кафедрой"
+                    android:textColor="#000000"
                     app:layout_constraintBottom_toTopOf="@+id/etBoss"
                     app:layout_constraintStart_toStartOf="@+id/etBoss" />
 
@@ -129,6 +139,8 @@
                     android:layout_marginTop="32dp"
                     android:layout_marginEnd="8dp"
                     android:hint="Ф.И.О."
+                    android:textColor="#000000"
+                    android:textColorHint="#000000"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/etAuditorium" />
@@ -138,6 +150,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
                     android:text="Email"
+                    android:textColor="#000000"
                     app:layout_constraintBottom_toTopOf="@+id/etEmail"
                     app:layout_constraintStart_toStartOf="@+id/etEmail" />
 
@@ -150,6 +163,8 @@
                     android:layout_marginTop="32dp"
                     android:layout_marginEnd="8dp"
                     android:hint="Введите email"
+                    android:textColor="#000000"
+                    android:textColorHint="#000000"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/etPhone" />
@@ -159,6 +174,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
                     android:text="Телефон"
+                    android:textColor="#000000"
                     app:layout_constraintBottom_toTopOf="@+id/etPhone"
                     app:layout_constraintStart_toStartOf="@+id/etPhone" />
 
@@ -171,6 +187,8 @@
                     android:layout_marginTop="32dp"
                     android:layout_marginEnd="8dp"
                     android:hint="Введите номер телефона"
+                    android:textColor="#000000"
+                    android:textColorHint="#000000"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="1.0"
                     app:layout_constraintStart_toStartOf="parent"
@@ -181,6 +199,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
                     android:text="Количество сотрудников"
+                    android:textColor="#000000"
                     app:layout_constraintBottom_toTopOf="@+id/etEmploy"
                     app:layout_constraintStart_toStartOf="@+id/etEmploy" />
 
@@ -193,6 +212,8 @@
                     android:layout_marginTop="32dp"
                     android:layout_marginEnd="8dp"
                     android:hint="Введите количество сотрудников"
+                    android:textColor="#000000"
+                    android:textColorHint="#000000"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/etEmail" />
@@ -203,6 +224,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
                     android:text="Количество бакалвров"
+                    android:textColor="#000000"
                     app:layout_constraintBottom_toTopOf="@+id/etBachalors"
                     app:layout_constraintStart_toStartOf="@+id/etBachalors" />
 
@@ -215,6 +237,8 @@
                     android:layout_marginTop="32dp"
                     android:layout_marginEnd="8dp"
                     android:hint="Введите количество бакалавров"
+                    android:textColor="#000000"
+                    android:textColorHint="#000000"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/etEmploy" />
@@ -224,6 +248,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
                     android:text="Количество магистров"
+                    android:textColor="#000000"
                     app:layout_constraintBottom_toTopOf="@+id/etMasters"
                     app:layout_constraintStart_toStartOf="parent" />
 
@@ -236,6 +261,8 @@
                     android:layout_marginTop="32dp"
                     android:layout_marginEnd="8dp"
                     android:hint="Введите количество магистров"
+                    android:textColor="#000000"
+                    android:textColorHint="#000000"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/etBachalors" />
@@ -246,7 +273,7 @@
                     android:layout_height="59dp"
                     android:layout_marginHorizontal="16dp"
                     android:layout_marginTop="32dp"
-                    android:backgroundTint="#3F51B4"
+                    android:backgroundTint="#721EBA"
                     android:textColor="@color/white"
                     android:text="Сохранить"
                     app:layout_constraintEnd_toEndOf="parent"

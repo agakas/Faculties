@@ -22,6 +22,7 @@ class DepartmentListFragment: MainFragment() {
     private lateinit var binding: FragmentDepartmentListBinding
     private lateinit var viewModel: DepartmentListViewModel
     var validationOK : Boolean = true
+    var sorted : Boolean = false
 
     private val adapter by lazy {
         DepartmentAdapter(
@@ -41,7 +42,13 @@ class DepartmentListFragment: MainFragment() {
         )
     }
     private fun sortByName() {
-        adapter.items = adapter.items.sortedBy { it.department_name }
+        if (sorted != true) {
+            adapter.items = adapter.items.sortedBy { it.department_name }
+            sorted = true
+        }else{
+            adapter.items = adapter.items.sortedByDescending { it.department_name }
+            sorted = false
+        }
     }
     private val initParams: Department_List_Fragment_Init by lazy { getInitParams() }
 

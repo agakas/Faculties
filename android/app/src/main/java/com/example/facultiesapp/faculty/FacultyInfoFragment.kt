@@ -40,10 +40,12 @@ class FacultyInfoFragment: MainFragment() {
             binding.etName.clearFocus()
             val name = binding.etName.text.toString()
 
-            if (name.isBlank() || check(name)==false) {
+
+           if (name.isBlank() || check(name)==false) {
                 showMessageByToast("Введите название")
                 return@setOnClickListener
             }
+
             viewModel.saveFaculty(Faculty(faculty_name = name, id = 0))
             closeFragment()
         }
